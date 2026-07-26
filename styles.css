@@ -281,7 +281,8 @@ main {
 .argument-section h2,
 .consequences-section h2,
 .safeguards-section h2,
-.paper-section h2 {
+.paper-section h2,
+.feedback-section h2 {
   margin: 0;
   font-family: var(--serif);
   font-size: clamp(2.2rem, 5vw, 4.6rem);
@@ -510,6 +511,67 @@ main {
   font-weight: 800;
 }
 
+.feedback-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(340px, 1.15fr);
+  gap: clamp(3rem, 8vw, 7rem);
+  align-items: center;
+  width: min(calc(100% - 3rem), var(--max));
+  margin: 0 auto;
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  border-top: 1px solid var(--line);
+}
+
+.feedback-copy > p:last-child {
+  max-width: 560px;
+  color: var(--ink-soft);
+}
+
+.feedback-card {
+  padding: clamp(1.8rem, 4vw, 3rem);
+  border-top: 5px solid var(--coral);
+  background: var(--night);
+  color: var(--cream);
+}
+
+.feedback-card-kicker {
+  margin: 0;
+  color: var(--teal);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.feedback-card h3 {
+  margin: 1rem 0;
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.feedback-card > p:not(.feedback-card-kicker) {
+  color: rgba(243, 233, 212, 0.78);
+}
+
+.feedback-card .button {
+  margin-top: 1rem;
+  border-color: var(--cream);
+  background: var(--cream);
+  color: var(--night);
+}
+
+.feedback-card .button:hover {
+  background: var(--teal);
+  color: var(--night);
+}
+
+.feedback-note {
+  margin: 1.25rem 0 0;
+  font-size: 0.78rem;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -553,7 +615,8 @@ footer p {
 
   .hero,
   .consequences-section,
-  .paper-section {
+  .paper-section,
+  .feedback-section {
     grid-template-columns: 1fr;
   }
 
@@ -578,7 +641,8 @@ footer p {
   .preview-frame,
   .argument-section,
   .safeguards-section,
-  .paper-section {
+  .paper-section,
+  .feedback-section {
     width: min(calc(100% - 2rem), var(--max));
   }
 
