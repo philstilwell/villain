@@ -308,6 +308,7 @@ main {
   display: block;
   width: min(calc(100% - 3rem), 1320px);
   margin: 0 auto;
+  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: #03080b;
   box-shadow: 0 2.5rem 6rem rgba(0, 0, 0, 0.35);
@@ -316,6 +317,9 @@ main {
 
 .preview-frame img {
   width: 100%;
+  height: auto;
+  aspect-ratio: 1672 / 941;
+  object-fit: contain;
 }
 
 .image-affordance {
